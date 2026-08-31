@@ -77,7 +77,11 @@ const App = () => {
 
             <button
               className="counter-btn decrease"
-              onClick={() => setCounter(counter - 1)}
+              onClick={() => {
+                if(counter>0) {
+                  setCounter(counter-1);
+                }
+              }}
             >
               −
             </button>
